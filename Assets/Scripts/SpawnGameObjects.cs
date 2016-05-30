@@ -33,6 +33,10 @@ public class SpawnGameObjects : MonoBehaviour {
 	{
 		// create a new gameObject
 		GameObject clone = Instantiate(spawnPrefab, transform.position, transform.rotation) as GameObject;
+		//activate if object is deactivated
+		if(clone.gameObject.activeInHierarchy==false){
+			clone.SetActive (true);
+		}
 
 		// set chaseTarget if specified
 		if ((chaseTarget != null) && (clone.gameObject.GetComponent<Chaser> () != null))

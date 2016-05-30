@@ -106,7 +106,7 @@ public class GameManager : MonoBehaviour {
 	public void Collect(int amount) {
 		score += amount;
 		if (canBeatLevel) {
-			mainScoreDisplay.text = score.ToString () + " of "+beatLevelScore.ToString ();
+			mainScoreDisplay.text = score.ToString () + " de "+beatLevelScore.ToString ();
 		} else {
 			mainScoreDisplay.text = score.ToString ();
 		}
