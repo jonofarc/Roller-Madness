@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class UIButtonLevelLoad : MonoBehaviour {
 	
 	public string LevelToLoad;
+	private string LevelPrefix="Level";
 	
 	public void loadLevel() {
 
@@ -19,5 +20,10 @@ public class UIButtonLevelLoad : MonoBehaviour {
 		}
 
 
+	}
+
+	public void ContinueLevel(){
+		Debug.Log ("Loading Level: "+LevelPrefix+PlayerPrefs.GetInt("CurrentLevel"));
+		SceneManager.LoadScene (LevelPrefix+PlayerPrefs.GetInt("CurrentLevel"));
 	}
 }

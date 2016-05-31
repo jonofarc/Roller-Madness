@@ -20,12 +20,12 @@ public class ControlChange : MonoBehaviour {
 	
 		Gyroscope = !Gyroscope;
 		if (Gyroscope) {
-			this.gameObject.GetComponent<Text> ().text = "Giroscopio";
+			this.gameObject.GetComponent<Text> ().text = "Joystick";
 			ControlType2.SetActive (false);
 			ControlType1.SetActive (true);
 
 		} else {
-			this.gameObject.GetComponent<Text> ().text = "Joystick";
+			this.gameObject.GetComponent<Text> ().text = "Giroscopio";
 			ControlType1.SetActive (false);
 			ControlType2.SetActive (true);
 		}
